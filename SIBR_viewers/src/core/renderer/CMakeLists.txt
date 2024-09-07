@@ -22,6 +22,8 @@ file(GLOB SOURCES "*.cpp" "*.h" "*.hpp" "shaders/*.frag" "shaders/*.vert" "shade
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
 
 include_directories(${Boost_INCLUDE_DIRS} .)
+include_directories(${Python3_INCLUDE_DIRS})
+
 if(WIN32)
 target_link_libraries(${PROJECT_NAME}
 	${Boost_LIBRARIES}
@@ -43,6 +45,8 @@ target_link_libraries(${PROJECT_NAME}
 	${OPENGL_LIBRARIES}
 	${OpenCV_LIBRARIES}
 	${GLFW_LIBRARY}
+	${TORCH_LIBRARIES}
+	${Python3_LIBRARIES}
 	sibr_system
 	sibr_view
 	sibr_assets

@@ -322,3 +322,14 @@ sibr_gitlibrary(TARGET xatlas
 )
 
 Win3rdPartyGlobalCacheAction()
+
+## FindTorch
+find_package(Torch REQUIRED)
+message(STATUS "torch status: ${TORCH_FOUND}")
+message(STATUS "torch library: ${TORCH_LIBRARIES}")
+message(STATUS "TORCH_INSTALL_PREFIX: ${TORCH_INSTALL_PREFIX}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
+
+## FindPython
+find_package(Python3 REQUIRED COMPONENTS Development)
+message(STATUS "Python3 library: ${Python3_LIBRARIES}")

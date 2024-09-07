@@ -463,7 +463,7 @@ sibr::GaussianView::GaussianView(const sibr::BasicIBRScene::Ptr& ibrScene, uint 
 	}
 	_scene->cameras()->debugFlagCameraAsUsed(imgs_ulr);
 
-	// »ñÈ¡fileµÄÎÄ¼þ¼ÐÃû£¬ fileÊÇconst char*
+	// ï¿½ï¿½È¡fileï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ fileï¿½ï¿½const char*
 	std::string ply_path = plyPath + "point_cloud.ply";
 	std::string opacity_mlp_path = plyPath + "opacity_mlp.pt";
 	std::string cov_mlp_path = plyPath + "cov_mlp.pt";
@@ -633,7 +633,7 @@ void sibr::GaussianView::onRenderIBR(sibr::IRenderTarget& dst, sibr::Camera& eye
 			projmatrix.contiguous().data<float>(),
 			tan_fovx,
 			tan_fovy,
-			FALSE,
+			false,
 			radii.contiguous().data<int>()
 		);
 		radii = (radii > 0).to(_libtorch_device);

@@ -211,3 +211,6 @@ ADD_SUBDIRECTORY(src)
 if (WIN32)
 ADD_SUBDIRECTORY(docs)
 endif()
+
+##  cmake -Bbuild . -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="/home/zesongyang/Library/libtorch"
+## cuda 11.8
