@@ -1,0 +1,7 @@
+LICENSE.md
+README.md
+setup.py
+octree_gs.egg-info/PKG-INFO
+octree_gs.egg-info/SOURCES.txt
+octree_gs.egg-info/dependency_links.txt
+octree_gs.egg-info/top_level.txt
