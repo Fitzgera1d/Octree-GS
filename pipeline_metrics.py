@@ -112,7 +112,7 @@ def main(cfg: DictConfig):
     parser = ArgumentParser(description="Training script parameters")
     # parser.add_argument('--model_paths', '-m', required=True, nargs="+", type=str, default=[])
     parser.add_argument('--model_paths', type=str, default=[])
-    args = parser.parse_args()
+    args = parser.parse_args([])
     
     # merge hydra into args
     for key, value in vars(args).items():

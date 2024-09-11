@@ -246,7 +246,7 @@ def render_sets(dataset : ModelParams, iteration : int, pipeline : PipelineParam
 
 def get_combined_args(parser : ArgumentParser, cfg:DictConfig):
     import sys
-    cmdlne_string = sys.argv[1:]
+    cmdlne_string = [] # sys.argv[1:]
     cfgfile_string = "Namespace()"
     if "model_path" not in cmdlne_string:
         cmdlne_string.extend(["--model_path", cfg.model_path])

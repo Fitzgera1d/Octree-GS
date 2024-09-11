@@ -491,7 +491,7 @@ def main(cfg: DictConfig):
     parser.add_argument("--checkpoint_iterations", nargs="+", type=int, default=[])
     parser.add_argument("--start_checkpoint", type=str, default = None)
     parser.add_argument("--gpu", type=str, default = '-1')
-    args = parser.parse_args()
+    args = parser.parse_args([])
 
     # merge hydra into args
     for key, value in vars(args).items():
