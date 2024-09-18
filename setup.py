@@ -1,7 +1,7 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='octree_gs',
     version='1.0.0',
-    py_modules=[],
+    packages=find_packages(),
 )
